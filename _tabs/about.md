@@ -4,5 +4,22 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+# 🛡️ whoami
+
+
+```bash
+┌──(ramzy㉿bouyahya)-[~]
+└─$ whoami
+Cybersecurity Researcher
+
+💻 Focused on vulnerability analysis and system defense  
+
+⚙️ Exploring the unseen layers where security meets precision  
+
+🧠 Passionate about uncovering flaws, strengthening systems,  
+and transforming complexity into clarity.  
+
+```
+
+> _Security is not a job, it’s a mindset._
+

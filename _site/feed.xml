@@ -1,0 +1,143 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Ramzy Bouyahya</title>
+  <subtitle>CyberSecurity Researcher Writeup's</subtitle>
+  <updated>2025-11-09T07:17:03+08:00</updated>
+  <author>
+    <name>ramzybouyahya</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
+  <rights> © 2025 ramzybouyahya </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Internal Paths/Files Leakage via Malformed Access Token on graph.meta.ai</title>
+    <link href="http://localhost:4000/posts/Internal-Paths-Files-Leakage-via-Malformed-Access-Token-on-graph.meta.ai/" rel="alternate" type="text/html" title="Internal Paths/Files Leakage via Malformed Access Token on graph.meta.ai" />
+    <published>2025-06-20T11:33:00+08:00</published>
+  
+    <updated>2025-06-20T11:33:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Internal-Paths-Files-Leakage-via-Malformed-Access-Token-on-graph.meta.ai/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Internal-Paths-Files-Leakage-via-Malformed-Access-Token-on-graph.meta.ai/" />
+    <author>
+      <name>ramzybouyahya</name>
+    </author>
+
+  
+    
+    <category term="Meta bug bounty" />
+    
+  
+
+  <summary>The graph.meta.ai API leaks detailed internal path and file information when a malformed or invalid access token is supplied in a GET request.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>IDOR - Unauthorized Meta Verified Waitlist Modification</title>
+    <link href="http://localhost:4000/posts/IDOR-Unauthorized-Meta-Verified-Waitlist-Modification/" rel="alternate" type="text/html" title="IDOR - Unauthorized Meta Verified Waitlist Modification" />
+    <published>2025-04-23T11:33:00+08:00</published>
+  
+    <updated>2025-04-23T11:33:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/IDOR-Unauthorized-Meta-Verified-Waitlist-Modification/</id>
+    <content type="text/html" src="http://localhost:4000/posts/IDOR-Unauthorized-Meta-Verified-Waitlist-Modification/" />
+    <author>
+      <name>ramzybouyahya</name>
+    </author>
+
+  
+    
+    <category term="Meta bug bounty" />
+    
+  
+
+  <summary>The flaw allows any user to modify the verification waitlist for any business simply by knowing its Business ID.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Toggle Messaging Notification for Any Meta Horizon Account</title>
+    <link href="http://localhost:4000/posts/Toggle-Messaging-Notification-for-Any-Meta-Horizon-Account/" rel="alternate" type="text/html" title="Toggle Messaging Notification for Any Meta Horizon Account" />
+    <published>2025-01-08T11:33:00+08:00</published>
+  
+    <updated>2025-01-08T11:33:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Toggle-Messaging-Notification-for-Any-Meta-Horizon-Account/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Toggle-Messaging-Notification-for-Any-Meta-Horizon-Account/" />
+    <author>
+      <name>ramzybouayhya</name>
+    </author>
+
+  
+    
+    <category term="Meta bug bounty" />
+    
+  
+
+  <summary>Unauthorized ability to toggle messaging notifications for any Meta Horizon account, allowing attackers to manipulate victims’ settings remotely.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Exposes Private Facebook/Workplace Videos for any user</title>
+    <link href="http://localhost:4000/posts/Exposes-Private-Facebook-Workplace-Videos-for-any-user/" rel="alternate" type="text/html" title="Exposes Private Facebook/Workplace Videos for any user" />
+    <published>2023-03-11T00:00:00+08:00</published>
+  
+    <updated>2023-03-11T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Exposes-Private-Facebook-Workplace-Videos-for-any-user/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Exposes-Private-Facebook-Workplace-Videos-for-any-user/" />
+    <author>
+      <name>ramzybouyahya</name>
+    </author>
+
+  
+    
+    <category term="Meta bug bounty" />
+    
+  
+
+  <summary>An internal review endpoint allowed access to private videos by ID, exposing CDN URLs for videos marked private</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Business Suite (Paid Partnership) - Add Creator to Any Instagram Account</title>
+    <link href="http://localhost:4000/posts/Business-Suite-Paid-Partnership-Add-Creator-to-Any-Instagram-Account/" rel="alternate" type="text/html" title="Business Suite (Paid Partnership) - Add Creator to Any Instagram Account" />
+    <published>2022-08-15T00:00:00+08:00</published>
+  
+    <updated>2022-08-15T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/Business-Suite-Paid-Partnership-Add-Creator-to-Any-Instagram-Account/</id>
+    <content type="text/html" src="http://localhost:4000/posts/Business-Suite-Paid-Partnership-Add-Creator-to-Any-Instagram-Account/" />
+    <author>
+      <name>ramzybouyahya</name>
+    </author>
+
+  
+    
+    <category term="Meta bug bounty" />
+    
+  
+
+  <summary>Authorization flaw allowed adding arbitrary creators to a brand's Paid Partnership on Instagram via GraphQL mutation.</summary>
+
+  </entry>
+
+</feed>
+
+
