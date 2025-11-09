@@ -35,7 +35,10 @@ Page admins can create groups in AR Studio Effect to allow users to create and m
 ```http
 POST /arp/settings/permissions/delete-group/async/?group_id={ID_group_a} HTTP/1.1
 Host: www.facebook.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+Accept: */*
 Content-Type: application/x-www-form-urlencoded
+Connection: close
 
 &__user=&__a=1&__dyn=7&__req=e&__be=1&__pc=PHASED%3ADEFAULT&dpr=1&__rev=&fb_dtsg=&jazoest=21971&__spin_r=&__spin_b=trunk&__spin_t=
 ```
