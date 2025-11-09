@@ -33,7 +33,7 @@ Impact: View‑only Insight users can post content‑like prompts on the Page, v
 
 #### Request
 ```http
-GET https://graph.facebook.com/v14.0/me?fields=accounts{access_token,name}
+GET https://graph.facebook.com/me?fields=accounts{access_token,name}
 ```
 
 #### Response 
