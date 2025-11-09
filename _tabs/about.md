@@ -1,25 +1,21 @@
+
+# 👋 Hi, I'm **Ramzy Bouyahya**
+
 ---
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
----
 
-# 🛡️ whoami
+<div style="background-color:#0d1117; color:#00ffcc; padding:20px; border-radius:10px; font-family:monospace;">
 
+┌──(<span style="color:#39ff14;">ramzy㉿bouyahya</span>)-[~]<br>
+└─$ <span style="color:#ffcc00;">whoami</span><br>
+<strong>Cybersecurity Researcher</strong><br><br>
 
-```bash
-┌──(ramzy㉿bouyahya)-[~]
-└─$ whoami
-Cybersecurity Researcher
+💻 <strong>Focused on vulnerability analysis and system defense</strong><br><br>
 
-💻 Focused on vulnerability analysis and system defense  
+⚙️ <em>Exploring the unseen layers where security meets precision</em><br><br>
 
-⚙️ Exploring the unseen layers where security meets precision  
+🧠 <strong>Passionate about uncovering flaws, strengthening systems,<br>
+and transforming complexity into clarity.</strong><br><br>
 
-🧠 Passionate about uncovering flaws, strengthening systems,  
-and transforming complexity into clarity.  
+<blockquote style="color:#9efff7;">🛡️ <em>Security is not a job, it’s a mindset.</em></blockquote>
 
-```
-
-> _Security is not a job, it’s a mindset._
-
+</div>
