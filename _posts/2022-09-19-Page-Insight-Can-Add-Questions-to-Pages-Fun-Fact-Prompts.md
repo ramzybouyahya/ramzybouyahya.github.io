@@ -33,7 +33,7 @@ Impact: View‑only Insight users can post content‑like prompts on the Page, v
 
 #### Request
 ```http
-GET v14.0/me?fields=accounts{access_token,name}
+GET https://graph.facebook.com/v14.0/me?fields=accounts{access_token,name}
 ```
 
 #### Response 
@@ -43,17 +43,11 @@ Returns Page list including **PageA** with an **access_token** usable by **UserB
 Using **PageA** access token in Graph API Explorer:
 
 #### Request
-```http
-POST v14.0/graphql
+```
+POST https://graph.facebook.com/graphql
 
 doc_id=6994740117216518
-variables={
-  "input": {
-    "title": "THE_TITLE",
-    "actor_id": "1",
-    "client_mutation_id": "1"
-  }
-}
+variables={"input": {"title": "THE_TITLE","actor_id": "1","client_mutation_id": "1"}}
 ```
 
 #### Response
