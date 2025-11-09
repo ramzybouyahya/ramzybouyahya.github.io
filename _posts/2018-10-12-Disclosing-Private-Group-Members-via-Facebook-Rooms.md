@@ -26,7 +26,10 @@ In September 2020, a vulnerability was discovered in Facebook's Rooms feature in
 ```http
 POST /api/graphql/ HTTP/1.1
 Host: www.facebook.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+Accept: */*
 Content-Type: application/x-www-form-urlencoded
+Connection: close
 
 &doc_id=3147738971987452&variables={"room_link":"{room_id}"}
 ```
