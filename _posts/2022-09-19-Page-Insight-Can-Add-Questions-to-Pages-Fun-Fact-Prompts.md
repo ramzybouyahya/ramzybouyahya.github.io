@@ -43,11 +43,10 @@ Returns Page list including **PageA** with an **access_token** usable by **UserB
 Using **PageA** access token in Graph API Explorer:
 
 #### Request
-```
+```http
 POST https://graph.facebook.com/graphql
 
-doc_id=6994740117216518
-variables={"input": {"title": "THE_TITLE","actor_id": "1","client_mutation_id": "1"}}
+&doc_id=6994740117216518&variables={"input": {"title": "THE_TITLE","actor_id": "1","client_mutation_id": "1"}}
 ```
 
 #### Response
