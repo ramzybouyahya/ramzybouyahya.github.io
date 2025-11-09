@@ -7,15 +7,11 @@ order: 4
 
 ---
 
-┌──(ramzy㉿bouyahya)-[~]  
+┌──(ramzybouyahya㉿bouyahya)-[~]  
 └─$ whoami  
-**Cybersecurity Researcher**
+**CyberSecurity Researcher**
 
-💻 **Focused on vulnerability analysis and system defense**  
-
-⚙️ *Exploring the unseen layers where security meets precision*  
-
-🧠 **Passionate about uncovering flaws, strengthening systems,  
-and transforming complexity into clarity.**  
+💻 **Focused on vulnerability analysis**  
+⚙️ **Passionate about uncovering flaws, strengthening systems**  
 
 > 🛡️ *Security is not a job, it’s a mindset.*
