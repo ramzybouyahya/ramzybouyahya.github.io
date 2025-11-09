@@ -28,8 +28,7 @@ POST /api/graphql/ HTTP/1.1
 Host: www.facebook.com
 Content-Type: application/x-www-form-urlencoded
 
-doc_id=3147738971987452
-variables={"room_link":"{room_id}"}
+&doc_id=3147738971987452&variables={"room_link":"{room_id}"}
 ```
 
 **Response:**
