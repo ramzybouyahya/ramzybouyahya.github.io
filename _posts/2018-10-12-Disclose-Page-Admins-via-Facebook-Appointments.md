@@ -19,10 +19,10 @@ A vulnerability was discovered in Facebook’s Pages product that allowed attack
 ## ⚙️ Steps to Reproduce
 
 ### Victim Scenario
-1. Victim (page admin of `page_a`) creates an appointment on their page.
+Victim (page admin of `page_a`) creates an appointment on their page.
 
 ### Attacker Steps
-1. The attacker sends a crafted GraphQL batch request:
+The attacker sends a crafted GraphQL batch request:
 
 ```http
 POST /api/graphqlbatch/?dpr=1 HTTP/1.1
