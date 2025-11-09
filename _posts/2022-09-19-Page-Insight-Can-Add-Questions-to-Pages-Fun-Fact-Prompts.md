@@ -12,8 +12,6 @@ mermaid: true
 ### 🧾 Description
 Normally, only Page Admins or Editors or Moderator can add questions to a Page. However, a user with Page Insight role (intended for view-only access) could leverage Graph API/GraphQL to create new questions on the Page.
 
-Impact: View‑only Insight users can post content‑like prompts on the Page, violating least‑privilege and enabling unauthorized content injection under the Page identity.
-
 **Impact:** View‑only Insight users can post content‑like prompts on the Page, violating least‑privilege and enabling unauthorized content injection under the Page identity.
 
 ---
