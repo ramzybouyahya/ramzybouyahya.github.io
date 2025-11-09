@@ -14,7 +14,7 @@ mermaid: true
 
 During routine testing of Wit.ai’s Facebook login integration I discovered a critical vulnerability: the backend accepted JWT `signed_request` tokens without verifying the HMAC-SHA256 signature. This allowed forging a valid `signed_request` by modifying the payload (e.g., `user_id`) and re-signing with any secret. The server relied only on the header & payload and ignored signature verification.
 
-An attacker could impersonate other Facebook users and obtain `access_token`s for their sessions.
+An attacker could impersonate other Facebook users and obtain `access_token` for their sessions.
 
 ---
 
@@ -101,37 +101,6 @@ except Exception as e:
 ```
 
 **Expected result (before the patch):** the server returns a JSON containing an `access_token` for the targeted `user_id`.
-
----
-
-## Root cause analysis
-
-The server accepted JWTs based on header & payload inspection but skipped verifying the cryptographic signature. JWTs using HMAC (HS256) require the server to verify the signature with the known secret; failing to do so makes token forgery trivial.
-
-Common implementation mistakes that lead to this class of bug:
-
-- Treating the `algorithm` field in the token as authoritative and trusting it blindly.
-- Using JWT libraries incorrectly (for example, decoding without signature verification, e.g., `jwt.decode(token, options={"verify_signature": False})`).
-- Accidentally disabling verification in custom parsing logic.
-
----
-
-## Impact
-
-- Unauthorized account takeover on Wit.ai via Facebook login.
-- Potential access to user-specific data, account actions, or any functionality gated by `me/facebook_signin`.
-
----
-
-## Fix / Mitigation
-
-- **Fix applied by Meta (April 16, 2019):** Enforce signature verification on `signed_request` tokens. The server must verify the HMAC-SHA256 signature using the correct secret before accepting the token.
-
-- **General recommendations for developers:**
-  - Always verify JWT signatures using a well-reviewed JWT library with default verification enabled.
-  - Never trust the `alg` field in an incoming token—use server-side configuration to select acceptable algorithms and reject tokens that do not match.
-  - Use asymmetric signing (RS256/ES256) where appropriate to avoid confusion between server-side secrets and client-provided tokens.
-  - Add monitoring and alerts for unexpected authentication flows or token anomalies.
 
 ---
 
