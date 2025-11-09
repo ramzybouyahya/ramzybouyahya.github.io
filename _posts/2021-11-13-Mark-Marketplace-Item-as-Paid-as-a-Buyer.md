@@ -28,7 +28,7 @@ The result misleads the seller (UI shows the order as *Paid* and hides the Mark 
 
 ### 📤 Request
 ```http
-POST /graphql
+POST /graphql HTTP/1.1
 Host: graph.facebook.com
 User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36
 Accept: */*
