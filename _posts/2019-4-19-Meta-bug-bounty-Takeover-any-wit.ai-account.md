@@ -21,10 +21,14 @@ An attacker could impersonate other Facebook users and obtain `access_token`s fo
 ## Affected endpoint
 
 ```http
-POST https://api.wit.ai/me/facebook_signin
+POST /me/facebook_signin HTTP/1.1
+Host: api.wit.ai
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+Accept: */*
 Content-Type: application/x-www-form-urlencoded
+Connection: close
 
-Body: signed_request=<JWT_TOKEN>
+&signed_request={JWT_TOKEN}
 ```
 
 ---
