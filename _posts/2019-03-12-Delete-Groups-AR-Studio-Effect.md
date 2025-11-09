@@ -37,7 +37,7 @@ POST /arp/settings/permissions/delete-group/async/?group_id={ID_group_a} HTTP/1.
 Host: www.facebook.com
 Content-Type: application/x-www-form-urlencoded
 
-__user=&__a=1&__dyn=7&__req=e&__be=1&__pc=PHASED%3ADEFAULT&dpr=1&__rev=&fb_dtsg=&jazoest=21971&__spin_r=&__spin_b=trunk&__spin_t=
+&__user=&__a=1&__dyn=7&__req=e&__be=1&__pc=PHASED%3ADEFAULT&dpr=1&__rev=&fb_dtsg=&jazoest=21971&__spin_r=&__spin_b=trunk&__spin_t=
 ```
 
 ### ✅ Response
