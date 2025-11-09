@@ -32,18 +32,7 @@ Accept: */*
 Content-Type: application/x-www-form-urlencoded
 Connection: close
 
-__user=&__a=1&__dyn=&__req=a&__be=1&__pc=&__rev=
-&fb_dtsg=AQHJVmZ8roIv%3AAQFBvwa5EaqB
-&queries={
-  "o0":{
-    "doc_id":"1735616686561494",
-    "query_params":{
-      "pageID":"ID_PAGE_A",
-      "startDate":1,
-      "endDate":9999999999999999
-    }
-  }
-}
+&queries={"o0":{"doc_id":"1735616686561494","query_params":{"pageID":"ID_PAGE_A","startDate":1,"endDate":9999999999999999}}}
 ```
 
 **Response:**
