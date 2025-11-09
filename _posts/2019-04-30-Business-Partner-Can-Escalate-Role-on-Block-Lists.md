@@ -34,7 +34,7 @@ POST /business/objects/add/connections/?business_id={ID_BUSINESS_2}&from_id={ID_
 Host: business.facebook.com
 Content-Type: application/x-www-form-urlencoded
 
-__a=1&__dyn=&__req=1p&__be=1&__pc=&dpr=1&__rev=&__comet_req=&fb_dtsg={FB_DTSG}&jazoest={JAZOEST}&__spin_r=&__spin_b=&__spin_t=
+&__a=1&__dyn=&__req=1p&__be=1&__pc=&dpr=1&__rev=&__comet_req=&fb_dtsg={FB_DTSG}&jazoest={JAZOEST}&__spin_r=&__spin_b=&__spin_t=
 ```
 
 ### ✅ Response
