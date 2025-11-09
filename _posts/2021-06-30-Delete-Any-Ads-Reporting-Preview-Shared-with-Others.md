@@ -24,8 +24,6 @@ The generated link is associated with a unique ID. Due to missing authorization 
 - **UserA** — Admin of **BusinessA** (creates and shares the report preview)  
 - **UserB** — Attacker (not a member of BusinessA; has their **own** business access token)
 
-**Environment:** Chrome / Firefox / Safari on macOS Big Sur
-
 1. **UserA** visits  
    `https://business.facebook.com/adsmanager/reporting/business_view?business_id={ID_BusinessA}`
 2. In the top bar, **UserA** clicks **Save** to save the Ads Reporting view.
