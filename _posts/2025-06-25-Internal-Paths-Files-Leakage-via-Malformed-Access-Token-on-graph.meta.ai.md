@@ -22,7 +22,12 @@ This behavior is triggered by providing a short or malformed token, which leads 
 **Request:**
 
 ```http
-GET https://graph.meta.ai/?access_token={malformed_token}
+GET /?access_token={malformed_token} HTTP/1.1
+Host: graph.meta.ai
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Connection: close
 ```
 
 **Response:**
