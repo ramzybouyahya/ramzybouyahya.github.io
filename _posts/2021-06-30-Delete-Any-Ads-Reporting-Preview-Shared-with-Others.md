@@ -33,8 +33,8 @@ The generated link is associated with a unique ID. Due to missing authorization 
 6. **UserB** obtains the **preview link ID** and, using **Graph API Explorer** (or any HTTP client) with **UserB’s own business or android access token**, submits:
 
 ### 📤 Request
-```
-DELETE v10.0/{ID_LINK}
+```http
+DELETE https://graph.facebook.com/v10.0/{ID_LINK}
 ```
 
 ### ✅ Response
