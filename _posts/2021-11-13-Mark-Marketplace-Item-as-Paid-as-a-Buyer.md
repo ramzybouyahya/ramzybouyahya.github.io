@@ -19,7 +19,6 @@ The result misleads the seller (UI shows the order as *Paid* and hides the Mark 
 ## ⚙️ Steps to Reproduce
 
 **Users:** UserA (Seller / Victim) — UserB (Buyer / Attacker)  
-**Environment:** Facebook Web (Chrome/Firefox), Windows 10
 
 1. **UserA** creates a new listing at `https://www.facebook.com/marketplace/create` and shares the item URL with **UserB**.  
 2. **UserB** opens `https://www.facebook.com/marketplace/item/{ID}` then clicks Message to open a Messenger thread with **UserA** about this item.  
