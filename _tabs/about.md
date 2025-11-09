@@ -7,9 +7,9 @@ order: 4
 
 ---
 
-┌──(ramzybouyahya㉿bouyahya)-[~]  
+┌──(****ramzy****㉿****bouyahya****)-[~]  
 └─$ whoami  
-**CyberSecurity Researcher**
+  **CyberSecurity Researcher**
 
 💻 **Focused on vulnerability analysis**  
 ⚙️ **Passionate about uncovering flaws, strengthening systems**  
