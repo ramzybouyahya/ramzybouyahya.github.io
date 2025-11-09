@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn: "https://raw.githubusercontent.com/ramzybouyahya/cdnramzy/main/"
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "e72ff3086c7809c05843a964d10c697e.jpg"
+avatar: "desktop-wallpaper-hacker-art-green-anime-thumbnail.jpg"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
