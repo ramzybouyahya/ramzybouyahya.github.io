@@ -24,7 +24,12 @@ An unauthorised GraphQL query could return the pending (unconfirmed) email addre
 
 #### Request
 ```http
-GET https://graph.oculus.com/graphql?q=node(User_ID){pending_email}&access_token=OC|660728964057742|
+GET /graphql?q=node(User_ID){pending_email}&access_token=OC|660728964057742| HTTP/1.1
+Host: graph.oculus.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Connection: close
 ```
 
 #### Response (example)
