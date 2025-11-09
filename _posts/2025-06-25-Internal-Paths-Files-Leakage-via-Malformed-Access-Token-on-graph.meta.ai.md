@@ -21,7 +21,7 @@ This behavior is triggered by providing a short or malformed token, which leads 
 
 **Request:**
 
-```
+```http
 GET https://graph.meta.ai/?access_token={malformed_token}
 ```
 
