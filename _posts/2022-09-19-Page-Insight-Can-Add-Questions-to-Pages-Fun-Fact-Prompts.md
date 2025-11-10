@@ -1,5 +1,5 @@
 ---
-title: Page Insight Can Add Questions to Pages (Fun Fact Prompts)
+title: Page Insight Can Add Questions to Pages
 description: A Page member with only 'Insight' role could create Page questions (fun fact prompts) via GraphQL, bypassing required admin/editor privileges.
 date: 2022-09-19 
 categories: [Meta bug bounty]
