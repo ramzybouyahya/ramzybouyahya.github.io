@@ -58,6 +58,6 @@ Only the resource owner (or explicitly authorized admins) should be able to gran
 - **Reported:** April 30, 2019 
 - **Triaged:** May 10, 2019 
 - **Fixed:** June 19, 2019  
-- **Reward:** Februray 19, 2019
+- **Reward:** June 19, 2019
 
 ---
