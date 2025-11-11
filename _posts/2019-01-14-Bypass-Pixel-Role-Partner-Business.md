@@ -2,7 +2,7 @@
 title: Bypass Pixel Role (Partner Business)
 description: Partner businesses with analyst role could escalate to pixel editor via the sharing_agreement endpoint.
 author: ramzybouayhya
-date: 2019-10-17 11:33:00 +0800
+date: 2019-1-14 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
