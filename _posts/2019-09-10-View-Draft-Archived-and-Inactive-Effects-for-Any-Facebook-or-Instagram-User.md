@@ -2,7 +2,7 @@
 title: View Draft, Archived and Inactive Effects for Any Facebook or Instagram User
 description: Preview parameter allowed unauthorized viewing of draft, archived, and inactive Spark AR effects for any user.
 author: ramzybouayhya
-date: 2019-03-12 11:33:00 +0800
+date: 2019-09-10 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
