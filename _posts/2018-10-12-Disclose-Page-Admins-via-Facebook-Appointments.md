@@ -1,6 +1,6 @@
 ---
 title: Disclose Page Admins via Facebook Appointments
-description: A vulnerability was discovered in Facebook’s Pages product that allowed attackers to disclose appointment details of any page
+description: This vulnerability permits the leakage of the page owner's identifier.
 author: ramzybouayhya
 date: 2018-10-12 11:33:00 +0800
 categories: [Meta bug bounty]
