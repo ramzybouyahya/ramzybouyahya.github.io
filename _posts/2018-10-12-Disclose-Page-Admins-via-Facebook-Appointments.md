@@ -1,6 +1,6 @@
 ---
 title: Disclose Page Admins via Facebook Appointments
-description: The vulnerability permits an unauthenticated actor to takeover any wit.ai account. The only prerequisite observed is knowledge of the target wit.ai identifier; no additional credentials are required.
+description: A vulnerability was discovered in Facebook’s Pages product that allowed attackers to disclose appointment details of any page
 author: ramzybouayhya
 date: 2018-10-12 11:33:00 +0800
 categories: [Meta bug bounty]
