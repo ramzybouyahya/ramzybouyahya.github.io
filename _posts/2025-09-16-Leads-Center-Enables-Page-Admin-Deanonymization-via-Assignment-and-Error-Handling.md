@@ -146,7 +146,7 @@ Combining both methods allows an attacker to retrieve real names and user IDs of
 
 ---
 
-## 📅 Timeline
+## 🗓️ Timeline
 - Reported: September 16, 2025
 - Triaged: September 30, 2025
 - Fixed: October 5, 2025
