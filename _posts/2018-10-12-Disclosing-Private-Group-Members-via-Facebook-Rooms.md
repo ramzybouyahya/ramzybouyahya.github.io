@@ -3,7 +3,6 @@ title: Disclosing Private Group Members via Facebook Rooms
 description: In September 2020, a vulnerability was discovered in Facebook's Rooms feature inside Groups that allowed attackers to disclose members of private groups through unauthenticated GraphQL requests.
 date: 2020-09-15 11:33:00 +0800
 categories: [Meta bug bounty]
-author: ramzybouyahya
 tags: [Meta]
 pin: false
 math: true
