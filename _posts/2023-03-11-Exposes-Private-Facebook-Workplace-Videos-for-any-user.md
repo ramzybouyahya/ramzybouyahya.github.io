@@ -4,7 +4,6 @@ description: An internal review endpoint allowed access to private videos by ID,
 date: 2023-03-11 
 categories: [Meta bug bounty]
 tags: [Meta]
-author: ramzybouyahya
 pin: false
 math: true
 mermaid: true
