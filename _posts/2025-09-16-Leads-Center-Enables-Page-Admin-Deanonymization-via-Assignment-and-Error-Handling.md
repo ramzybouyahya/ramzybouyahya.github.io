@@ -62,6 +62,7 @@ This side-channel issue allows an attacker to verify whether an arbitrary Facebo
 2. Query the Page’s lead opportunities and record the `lead_opportunity_id`.
 3. Issue the `lead_opportunity_assign_admin` mutation with a test `owner` value.
 4. Observe the returned error response.
+
 ----
 
 ### A. Fetch Lead Opportunities
