@@ -16,6 +16,7 @@ The vulnerabilities differ in exploitation conditions:
 - The first vulnerability requires the attacker to already exist as a lead. This can happen naturally when a Page admin adds the attacker as a lead via Messenger, Instant Forms, or any other lead source. Once the lead exists, Page admins commonly use the built‑in feature to assign the lead to themselves in order to manage it. At that moment, the attacker can identify which Page admin is responsible for the lead.
 - The second vulnerability does not require any interaction from Page admins. The attacker can directly infer whether an arbitrary user ID belongs to a Page admin by abusing inconsistent error responses returned by a GraphQL mutation. This method relies purely on ID guessing and error analysis.
 When combined, these issues allow full Page Admin deanonymization.
+
 ---
 
 ## ⚙️ Method 1: Direct Information Disclosure via Lead Assignment
