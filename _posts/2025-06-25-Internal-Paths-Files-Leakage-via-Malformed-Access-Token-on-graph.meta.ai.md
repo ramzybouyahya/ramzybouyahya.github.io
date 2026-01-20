@@ -4,6 +4,7 @@ description: The graph.meta.ai API leaks detailed internal path and file informa
 date: 2025-05-20 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
+author: ramzybouyahya
 pin: false
 math: true
 mermaid: true
