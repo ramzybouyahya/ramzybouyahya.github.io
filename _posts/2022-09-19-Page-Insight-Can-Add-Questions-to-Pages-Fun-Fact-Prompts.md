@@ -4,7 +4,6 @@ description: A Page member with only 'Insight' role could create Page questions 
 date: 2022-09-19 
 categories: [Meta bug bounty]
 tags: [Meta]
-author: ramzybouyahya
 pin: false
 math: true
 mermaid: true
@@ -26,9 +25,9 @@ Normally, only Page Admins or Editors or Moderator can add questions to a Page. 
 ### 1) Obtain Page access token (as Insight)
 1. **UserB** opens Business settings:  
    `https://business.facebook.com/settings/?business_id={ID}`  
-2. In DevTools, capture UserB’s **business access token**, then load Graph API Explorer:  
+2. In DevTools, capture UserB’s business access token, then load Graph API Explorer:  
    `https://developers.facebook.com/tools/explorer`  
-3. Query own accounts to fetch a **Page token**:
+3. Query own accounts to fetch a Page token:
 
 #### Request
 ```http
@@ -41,10 +40,10 @@ Connection: close
 ```
 
 #### Response 
-Returns Page list including **PageA** with an **access_token** usable by **UserB** (Insight).
+Returns Page list including PageA with an access_token usable by UserB (Insight).
 
 ### 2) Create a new Page question
-Using **PageA** access token in Graph API Explorer:
+Using PageA access token in Graph API Explorer:
 
 #### Request
 ```http
@@ -84,9 +83,9 @@ Connection: close
 ```
 
 ### 3) Verify on the Page
-**UserA** visits:  
+UserA visits:  
 `https://www.facebook.com/profile.php?id={ID_PAGE}&sk=fun_fact_asked`  
-→ **New questions** appear as if added by authorized roles, even though created by **Insight**.
+→ New questions appear as if added by authorized roles, even though created by Insight.
 
 ---
 
