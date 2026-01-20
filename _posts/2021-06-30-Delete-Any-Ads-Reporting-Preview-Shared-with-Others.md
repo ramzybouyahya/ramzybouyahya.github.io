@@ -1,7 +1,7 @@
 ---
 title: Delete Any Ads Reporting Preview Shared with Others
 description: Anyone with the preview link ID could delete/expire shared Ads Reporting previews using Graph API, impacting externally shared reports.
-author: ramzybouayhya
+author: ramzybouyahya
 date: 2022-08-15 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
