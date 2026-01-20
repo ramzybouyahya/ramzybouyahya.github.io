@@ -1,7 +1,7 @@
 ---
 title: Business Partner Can Escalate Role on Block Lists
 description: Partner businesses with limited 'apply block list' role could escalate to manage/delete block lists via an insecure add/connections endpoint.
-author: ramzybouayhya
+author: ramzybouyahya
 date: 2019-04-30 01:20:00 +0100
 categories: [Meta bug bounty]
 tags: [Meta]
