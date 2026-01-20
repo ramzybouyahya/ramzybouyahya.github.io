@@ -1,7 +1,6 @@
 ---
 title: "Leads Center Enables Page Admin Deanonymization via Assignment and Error Handling"
 description: "Two Leads Center issues enable Page Admin identification through lead assignment disclosure and error‑based role inference."
-author: ramzybouyahya
 date: 2025-09-16
 categories: [Meta bug bounty]
 tags: [Meta]
