@@ -4,6 +4,7 @@ description: Authorization flaw allowed adding arbitrary creators to a brand's P
 date: 2022-08-15 
 categories: [Meta bug bounty]
 tags: [Meta]
+author: ramzybouyahya
 pin: false
 math: true
 mermaid: true
