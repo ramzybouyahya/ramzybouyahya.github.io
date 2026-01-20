@@ -4,6 +4,7 @@ description: A Page member with only 'Insight' role could create Page questions 
 date: 2022-09-19 
 categories: [Meta bug bounty]
 tags: [Meta]
+author: ramzybouyahya
 pin: false
 math: true
 mermaid: true
