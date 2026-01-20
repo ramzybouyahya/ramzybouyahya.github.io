@@ -1,7 +1,7 @@
 ---
 title: Mark Marketplace Item as Paid as a Buyer
 description: Buyer-side GraphQL mutations allowed changing a Marketplace listing to 'Paid', deceiving sellers and disabling the 'Mark as paid' control.
-author: ramzybouayhya
+author: ramzybouyahya
 date: 2021-11-13 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
