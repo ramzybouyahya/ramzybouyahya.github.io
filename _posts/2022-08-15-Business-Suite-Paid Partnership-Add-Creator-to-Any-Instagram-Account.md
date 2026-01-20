@@ -4,7 +4,6 @@ description: Authorization flaw allowed adding arbitrary creators to a brand's P
 date: 2022-08-15 
 categories: [Meta bug bounty]
 tags: [Meta]
-author: ramzybouyahya
 pin: false
 math: true
 mermaid: true
@@ -15,7 +14,7 @@ An attacker could manage Paid Partnerships for any business‑linked Instagram a
 The attacker only needed:
 - The **brand Instagram ID** (`brand_ig_fbid`)
 - The **creator Instagram ID** (`creator_ig_fbid`)
-- Their **own** business access token (not belonging to the target Business)
+- Their own business access token (not belonging to the target Business)
 
 **Impact:** Unauthorized brand–creator linking invites could be sent on behalf of the target Business, enabling abuse of branded content ads, fraud, or reputational harm.
 
@@ -24,14 +23,14 @@ The attacker only needed:
 ## ⚙️ Steps to Reproduce
 
 **Users:**  
-- **UserA** — Admin of **BusinessA** (`business_id = AAA`), connected to Instagram (`brand_ig_fbid = XXX`)  
+- **UserA** — Admin of BusinessA (`business_id = AAA`), connected to Instagram (`brand_ig_fbid = XXX`)  
 - **UserB** — Attacker (not a member of BusinessA)
 
-**Preconditions:** BusinessA is linked to a **professional Instagram account**.
+**Preconditions:** BusinessA is linked to a professional Instagram account.
 
-1. **Recon:** UserB learns the target **Instagram Brand ID** (`{XXX}`) and the desired **Creator IG ID** (`{ID_creator}`).  
-2. **Access Token:** UserB goes to `https://business.facebook.com/settings/?business_id={ID_business}` and captures **their own** business/adnroid access token from network traffic.  
-3. **Graph API Explorer:** Visit `https://developers.facebook.com/tools/explorer/` and configure a **POST** GraphQL request.  
+1. **Recon:** UserB learns the target Instagram Brand ID (`{XXX}`) and the desired **Creator IG ID** (`{ID_creator}`).  
+2. **Access Token:** UserB goes to `https://business.facebook.com/settings/?business_id={ID_business}` and captures their own business/adnroid access token from network traffic.  
+3. **Graph API Explorer:** Visit `https://developers.facebook.com/tools/explorer/` and configure a POST GraphQL request.  
 4. **Submit Mutation:**
 
 ### 📤 Request
@@ -61,12 +60,12 @@ Connection: close
 
 5. **Verification:** UserA opens  
    `https://business.facebook.com/latest/settings/business_paid_partnerships?business_id={AAA}`  
-   → Sees an **invitation** has been created to the specified **creator** by UserB.
+   → Sees an invitation has been created to the specified creator by UserB.
 
 ---
 
 ## 🧱 Expected Behavior
-Only **authorized admins** of the target **BusinessA** should be able to add **creators** to its **Paid Partnership** settings for the linked Instagram brand.
+Only authorized admins of the target BusinessA should be able to add creators to its Paid Partnership settings for the linked Instagram brand.
 
 ---
 
