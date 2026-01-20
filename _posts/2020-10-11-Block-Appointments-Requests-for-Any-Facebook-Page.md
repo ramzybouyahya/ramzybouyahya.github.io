@@ -1,7 +1,6 @@
 ---
 title: Block Appointments Requests for Any Facebook Page
 description: Unauthenticated POST to GraphQL could block appointment requests management for any Facebook Page.
-author: ramzybouyahya
 date: 2020-10-11 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
