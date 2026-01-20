@@ -1,7 +1,6 @@
 ---
 title: View Reports Ad Account for Any Business (Export via Report ID)
 description: Using report ID access, an attacker could export Ads Manager reports for arbitrary businesses.
-author: ramzybouyahya
 date: 2019-10-17 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
