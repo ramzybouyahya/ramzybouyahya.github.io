@@ -1,7 +1,7 @@
 ---
 title: View Pending Email of Any Oculus User via GraphQL
 description: A GraphQL endpoint exposed pending (unconfirmed) email addresses for Oculus users by ID, leaking PII.
-date: 2018-05-22 
+date: 2025-10-6
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
