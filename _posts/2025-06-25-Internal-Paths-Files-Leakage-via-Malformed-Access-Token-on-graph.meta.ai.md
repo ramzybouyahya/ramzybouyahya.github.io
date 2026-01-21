@@ -1,7 +1,7 @@
 ---
 title: Internal Paths/Files Leakage via Malformed Access Token on graph.meta.ai
 description: The graph.meta.ai API leaks detailed internal path and file information when a malformed or invalid access token is supplied in a GET request.
-date: 2025-05-20 11:33:00 +0800
+date: 2025-10-16 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
