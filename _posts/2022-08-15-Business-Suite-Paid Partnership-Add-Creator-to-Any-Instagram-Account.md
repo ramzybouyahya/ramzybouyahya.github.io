@@ -1,7 +1,7 @@
 ---
 title: Business Suite (Paid Partnership) - Add Creator to Any Instagram Account
 description: Authorization flaw allowed adding arbitrary creators to a brand's Paid Partnership on Instagram via GraphQL mutation.
-date: 2022-08-15 
+date: 2025-10-4
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
