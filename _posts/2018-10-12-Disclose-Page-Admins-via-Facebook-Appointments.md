@@ -1,7 +1,7 @@
 ---
 title: Disclose Page Admins via Facebook Appointments
 description: This vulnerability permits the leakage of the page owner's identifier.
-date: 2018-10-12 11:33:00 +0800
+date: 2025-10-18 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
