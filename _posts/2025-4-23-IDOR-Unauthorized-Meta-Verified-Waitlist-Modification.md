@@ -1,7 +1,7 @@
 ---
 title: IDOR - Unauthorized Meta Verified Waitlist Modification
 description: The flaw allows any user to modify the verification waitlist for any business simply by knowing its Business ID.
-date: 2025-10-15 11:33:00 +0800
+date: 2025-11-15 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
