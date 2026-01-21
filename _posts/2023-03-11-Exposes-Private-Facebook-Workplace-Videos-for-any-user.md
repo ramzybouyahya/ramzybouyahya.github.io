@@ -1,7 +1,7 @@
 ---
 title: Exposes Private Facebook/Workplace Videos for any user
 description: An internal review endpoint allowed access to private videos by ID, exposing CDN URLs for videos marked private
-date: 2023-03-11 
+date: 2025-10-7
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
