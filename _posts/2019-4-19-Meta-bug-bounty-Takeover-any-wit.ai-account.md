@@ -1,7 +1,7 @@
 ---
 title: Takeover any wit.ai account
 description: The vulnerability permits an unauthenticated actor to takeover any wit.ai account. The only prerequisite observed is knowledge of the target wit.ai identifier; no additional credentials are required.
-date: 2025-10-21 11:33:00 +0800
+date: 2025-5-21 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
