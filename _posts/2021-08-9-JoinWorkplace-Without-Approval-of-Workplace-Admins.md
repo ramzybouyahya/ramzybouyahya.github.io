@@ -1,7 +1,7 @@
 ---
 title: Join Workplace Without Approval of Workplace Admin
 description: Users from allowed/verified domains could join a Workplace without admin approval using invite link or activation flow.
-date: 2025-10-11
+date: 2025-8-11
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
