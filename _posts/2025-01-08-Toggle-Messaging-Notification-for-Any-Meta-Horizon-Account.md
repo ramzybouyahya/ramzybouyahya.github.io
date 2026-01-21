@@ -1,7 +1,7 @@
 ---
 title: Toggle Messaging Notification for Any Meta Horizon Account
 description: Unauthorized ability to toggle messaging notifications for any Meta Horizon account, allowing attackers to manipulate victims’ settings remotely.
-date: 2025-10-1 11:33:00 +0800
+date: 2025-11-1 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
