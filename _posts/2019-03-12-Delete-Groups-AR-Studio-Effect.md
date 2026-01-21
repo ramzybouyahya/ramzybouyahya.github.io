@@ -1,7 +1,7 @@
 ---
 title: Delete Groups AR Studio Effect
 description: Users without page roles could delete AR Studio Effect groups, removing other users and disrupting creators workflows.
-date: 2025-10-12 11:33:00 +0800
+date: 2025-4-12 11:33:00 +0800
 categories: [Meta bug bounty]
 tags: [Meta]
 pin: false
