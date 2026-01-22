@@ -1,5 +1,5 @@
 ---
-title: "Leads Center Enables Page Admin Deanonymization via Assignment and Error Handling"
+title: "Facebook Leads Center Enables Page Admin Deanonymization via Assignment and Error Handling"
 description: "Two Leads Center issues enable Page Admin identification through lead assignment disclosure and error‑based role inference."
 date: 2026-01-21
 categories: [Meta bug bounty]
