@@ -1,6 +1,6 @@
 ---
-title: One-Click CSRF for Unauthorized Session Collaboration Approval on manus
-description: One-Click CSRF for Unauthorized Session Collaboration Approval on manus
+title: One-Click CSRF for Unauthorized Session Collaboration Approval on manus.im
+description: One-Click CSRF for Unauthorized Session Collaboration Approval on manus.im
 date: 2026-02-04
 categories: [Meta bug bounty]
 tags: [Manus.im]
