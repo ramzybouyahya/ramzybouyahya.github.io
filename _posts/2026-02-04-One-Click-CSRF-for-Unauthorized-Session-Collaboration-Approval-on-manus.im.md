@@ -4,7 +4,7 @@ description: One-Click CSRF for Unauthorized Session Collaboration Approval on m
 date: 2026-02-04
 categories: [Meta bug bounty]
 tags: [Manus.im]
-pin: true
+pin: false
 math: true
 mermaid: true
 ---
