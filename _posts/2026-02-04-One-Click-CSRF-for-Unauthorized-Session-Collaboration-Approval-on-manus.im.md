@@ -1,7 +1,7 @@
 ---
 title: One-Click CSRF for Unauthorized Session Collaboration Approval on manus.im
 description: The issue flaw in the session approval workflow allows attackers to bypass cross-site protections and force authenticated session owners into granting unauthorized READ_WRITE access to private AI sessions through a single malicious link.
-date: 2026-02-04
+date: 2026-06-15
 categories: [Meta bug bounty]
 tags: [Manus.im]
 pin: false
