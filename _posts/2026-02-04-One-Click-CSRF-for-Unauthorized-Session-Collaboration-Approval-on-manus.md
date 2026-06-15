@@ -1,4 +1,3 @@
-
 ---
 title: One-Click CSRF for Unauthorized Session Collaboration Approval on manus
 description: One-Click CSRF for Unauthorized Session Collaboration Approval on manus
